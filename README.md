@@ -7,6 +7,7 @@ This library mainly exists to power `snips-skill-overhead`, which is a module fo
 ## Random Comments
  - Please don't abuse this. This is using public flightradar24.com data. They offer a great
  service, throw some cash their way (and look for real APIs) if you want to start hammering it.
+ - Note the Snips skill is written using Python 3. However the public version of `hermes_python` (the library used for speaking via MQTT to Snips) is only build for Python 2. I've documented the minor tweaks needs to make it work here: https://github.com/snipsco/snips-issues/issues/26
 
 ## Credits
 The airline, airport, and plane data I've included here aren't my own work (my I've added one
@@ -17,6 +18,7 @@ or two very minor tweaks):
 
 ## Example Usage
 
+### As a module
 `get_aircrafts` takes in one string, in format `lat_a,lat_b,long_y,long_z` which will form a search area of ay, az, by, bz.
 
 ```
@@ -32,6 +34,7 @@ or two very minor tweaks):
 'London Heathrow Airport'
 ```
 
+### As a script
 If executed standalone, this module will produce a simple example output:
 
 ```
@@ -64,4 +67,16 @@ MUC->LHR LH2470 ← (Airbus A320)
 CPH->LHR BA811  ↑ (Airbus A319)
 EDI->LCY BA8701 ← (Embraer 190)
 STN->CDG QR8440 ↘ (Boeing 777-200LR)
+```
+
+### As a Snips skill
+
+Once `action-overhead-handler.py` is running (either by yourself, or automatically by `snips-skill-server`), it will subscribe to the configured Snips action (e.g. `whatPlanesAreOverhead`). Once triggered it will respond by sending the text-to-speech service a string of text describing the aircraft it's found, in a format that's optimized for computer pronunciation:
+
+```
+I have identified 1 aircraft.
+
+British Airways, 4 2 9.
+A Boeing 7 3 7 200. Heading East.
+From "London Heathrow", to "Seattle Tacoma".
 ```
