@@ -7,7 +7,8 @@ This library mainly exists to power `snips-skill-overhead`, which is a module fo
 ## Random Comments
  - Please don't abuse this. This is using public flightradar24.com data. They offer a great
  service, throw some cash their way (and look for real APIs) if you want to start hammering it.
- - Note the Snips skill is written using Python 3. However the public version of `hermes_python` (the library used for speaking via MQTT to Snips) is only build for Python 2. I've documented the minor tweaks needs to make it work here: https://github.com/snipsco/snips-issues/issues/26
+ - Note the Snips skill is written using Python 3. However the public version of `hermes_python` (the library used for speaking via MQTT to Snips) is only built for Python 2. I've documented the minor tweaks needs to make Python 3 work here: https://github.com/snipsco/snips-issues/issues/26
+ - I recommend a high-quality TTS service if you want the results to be spoken. I have another project which makes Snips use AWS Polly: https://github.com/hcooper/snips-tts-polly.
 
 ## Credits
 The airline, airport, and plane data I've included here aren't my own work (my I've added one
