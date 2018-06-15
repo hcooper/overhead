@@ -78,6 +78,8 @@ Once `action-overhead-handler.py` is running (either by yourself, or automatical
 I have identified 1 aircraft.
 
 British Airways, 4 2 9.
-A Boeing 7 3 7 200. Heading East.
-From "London Heathrow", to "Seattle Tacoma".
+An Airbus A 3 20. Heading East.
+From "Amsterdam Schiphol", to "London Heathrow".
 ```
+
+[Example output](example.mp3) using AWS Polly for TTS.
