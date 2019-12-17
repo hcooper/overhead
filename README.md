@@ -72,6 +72,8 @@ STN->CDG QR8440 ↘ (Boeing 777-200LR)
 
 ### As a Snips skill
 
+***In light of Snips being acquired, and its public services being shutdown, this plugin is no longer maintained. See https://www.home-assistant.io/blog/2019/12/03/sonos-shutting-down-local-voice-option-snips/ for more information.***
+
 Once `action-overhead-handler.py` is running (either by yourself, or automatically by `snips-skill-server`), it will subscribe to the configured Snips action (e.g. `whatPlanesAreOverhead`). Once triggered it will respond by sending the text-to-speech service a string of text describing the aircraft it's found, in a format that's optimized for computer pronunciation:
 
 ```
