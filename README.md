@@ -1,3 +1,6 @@
+> [!WARNING]  
+> Flightradar24 has changed a lot since this was written. It's quite possible, if not probable, this doesn't work anymore.
+
 # overhead
 
 `overhead` is a python module which pulls data from flightradar24.com. For a given area it returns a list of `Aircraft()` objects. These objects have a number of basic properties (e.g. airline, direction of flight, model, etc), which make them easily ingested by downstream services.
